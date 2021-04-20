@@ -7,6 +7,9 @@ using System.IO;
 
 namespace Rushtell_Bunk
 {
+    /// <summary>
+    /// Логер который ведет записи всех автоматических зачислений средств, которые начисляются в конце тика таймера
+    /// </summary>
     class Loger
     {
         public Loger(SystemPayments W)

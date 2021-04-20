@@ -10,6 +10,9 @@ using Rushtell_Bunk.Clients;
 
 namespace Rushtell_Bunk
 {
+    /// <summary>
+    /// Парсер Json файлов и добавления данных в локальный репозиторий, не используется так как данные берутся из базы данных
+    /// </summary>
     public class Parser
     {
         public Parser (object e)

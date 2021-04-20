@@ -20,6 +20,9 @@ namespace Rushtell_Bunk
             model = new ModelStandart();
         }
 
+        /// <summary>
+        /// Загрузка всех данных в локальную базу данных и привязка к таблице
+        /// </summary>
         public void LoadData()
         {
             W.DataContext = model.buisnessLogic;
@@ -37,6 +40,9 @@ namespace Rushtell_Bunk
             W.lsOrg.ItemsSource = model.viewOrganizations;
         }
 
+        /// <summary>
+        /// Сделать клиента VIP клиентом
+        /// </summary>
         public void SetVIPWorker()
         {
             if (W.tabLists.SelectedIndex == 0)
@@ -55,6 +61,9 @@ namespace Rushtell_Bunk
             else MessageBox.Show("VIP can be seted only standart clients!");
         }
 
+        /// <summary>
+        /// Отображение данных выбранного клиента
+        /// </summary>
         public void ViewConcretData()
         {
             W.idtext.Text = "";
@@ -86,6 +95,9 @@ namespace Rushtell_Bunk
             }
         }
 
+        /// <summary>
+        /// Удаление клиента
+        /// </summary>
         public void Delete()
         {
             if (W.tabLists.SelectedIndex == 0)
@@ -115,18 +127,27 @@ namespace Rushtell_Bunk
             Repository.Refresh();
         }
 
+        /// <summary>
+        /// Сохранение данных в Json файл, отключенно так как данные сохраняются и берутся из базы данных
+        /// </summary>
         public void Save()
         {
             var save = Task.Factory.StartNew(() => new Save(Repository.db));
             save.Wait();
         }
 
+        /// <summary>
+        /// Создание окна добавления клиента
+        /// </summary>
         public void CreateAddWindow()
         {
             AddWindow addWindow = new AddWindow();
             addWindow.ShowDialog();
         }
 
+        /// <summary>
+        /// Создание окна для зачисления денег на счет клиента
+        /// </summary>
         public void CreateDepositWindow()
         {
             if (W.idtext.Text != "")
@@ -140,6 +161,9 @@ namespace Rushtell_Bunk
             }
         }
 
+        /// <summary>
+        /// Создание окна для снятия денег со счета клиента
+        /// </summary>
         public void CreateWithdrawWindow()
         {
             if (W.idtext.Text != "")
@@ -153,6 +177,9 @@ namespace Rushtell_Bunk
             }
         }
 
+        /// <summary>
+        /// Создание окна для перевода денег со счета выбранного клиента на счет другого клиента
+        /// </summary>
         public void CreateTransferWindow()
         {
             if (W.idtext.Text != "")

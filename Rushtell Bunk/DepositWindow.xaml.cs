@@ -23,38 +23,20 @@ namespace Rushtell_Bunk
     public partial class DepositWindow : Window
     {
         MainWindow W;
+        PresenterForDeposit presenter;
+
         public DepositWindow(MainWindow W)
         {
             InitializeComponent();
             this.W = W;
             ID.Text = W.idtext.Text;
             Deposit.Text = W.textDeposit.Text;
+            presenter = new PresenterForDeposit(this);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (Convert.ToDouble(sum.Text) < 0) throw new MoneyException("Sum can be only positive number");
-                Repository.db[Convert.ToInt32(ID.Text)].deposit += Convert.ToDouble(sum.Text);
-                EntityDB.Change(Repository.db[Convert.ToInt32(ID.Text)]);
-                //BaseSQL.Change(SystemPayments.db[Convert.ToInt32(ID.Text)]);
-                string log = $"-->Счёт клиента с ID: {ID.Text} был пополнен на сумму {sum.Text}";
-                using (StreamWriter st = new StreamWriter(@"logs.txt", true))
-                {
-                    st.WriteLine(log);
-                }
-                this.DialogResult = true;
-            }
-            catch (MoneyException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("Wrong sum");
-            }
-
+            presenter.DepositMoney();
         }
     }
 }
