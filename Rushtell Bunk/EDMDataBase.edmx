@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EDMdbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="EDMdbModelStoreContainer">
+    <EntitySet Name="Organizations" EntityType="EDMdbModel.Store.Organizations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VIPworkers" EntityType="EDMdbModel.Store.VIPworkers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Workers" EntityType="EDMdbModel.Store.Workers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Organizations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="deposit" Type="float" Nullable="false" />
+    <Property Name="methodPayments" Type="int" Nullable="false" />
+    <Property Name="mounthCreateStandartPaymentMeth" Type="int" Nullable="false" />
+    <Property Name="depositType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="VIPworkers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="lastname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="deposit" Type="float" Nullable="false" />
+    <Property Name="methodPayments" Type="int" Nullable="false" />
+    <Property Name="mounthCreateStandartPaymentMeth" Type="int" Nullable="false" />
+    <Property Name="depositType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Workers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="lastname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="deposit" Type="float" Nullable="false" />
+    <Property Name="methodPayments" Type="int" Nullable="false" />
+    <Property Name="mounthCreateStandartPaymentMeth" Type="int" Nullable="false" />
+    <Property Name="depositType" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EDMdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Organizations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="salary" Type="Int32" Nullable="false" />
+          <Property Name="deposit" Type="Double" Nullable="false" />
+          <Property Name="methodPayments" Type="Int32" Nullable="false" />
+          <Property Name="mounthCreateStandartPaymentMeth" Type="Int32" Nullable="false" />
+          <Property Name="depositType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIPworkers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="age" Type="Int32" Nullable="false" />
+          <Property Name="salary" Type="Int32" Nullable="false" />
+          <Property Name="deposit" Type="Double" Nullable="false" />
+          <Property Name="methodPayments" Type="Int32" Nullable="false" />
+          <Property Name="mounthCreateStandartPaymentMeth" Type="Int32" Nullable="false" />
+          <Property Name="depositType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Workers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="age" Type="Int32" Nullable="false" />
+          <Property Name="salary" Type="Int32" Nullable="false" />
+          <Property Name="deposit" Type="Double" Nullable="false" />
+          <Property Name="methodPayments" Type="Int32" Nullable="false" />
+          <Property Name="mounthCreateStandartPaymentMeth" Type="Int32" Nullable="false" />
+          <Property Name="depositType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EDMdbRushBank" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Organizations" EntityType="Self.Organizations" />
+          <EntitySet Name="VIPworkers" EntityType="Self.VIPworkers" />
+          <EntitySet Name="Workers" EntityType="Self.Workers" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EDMdbModelStoreContainer" CdmEntityContainer="EDMdbRushBank">
+    <EntitySetMapping Name="Organizations">
+      <EntityTypeMapping TypeName="IsTypeOf(EDMdbModel.Organizations)">
+        <MappingFragment StoreEntitySet="Organizations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="deposit" ColumnName="deposit" />
+          <ScalarProperty Name="methodPayments" ColumnName="methodPayments" />
+          <ScalarProperty Name="mounthCreateStandartPaymentMeth" ColumnName="mounthCreateStandartPaymentMeth" />
+          <ScalarProperty Name="depositType" ColumnName="depositType" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIPworkers">
+      <EntityTypeMapping TypeName="IsTypeOf(EDMdbModel.VIPworkers)">
+        <MappingFragment StoreEntitySet="VIPworkers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="deposit" ColumnName="deposit" />
+          <ScalarProperty Name="methodPayments" ColumnName="methodPayments" />
+          <ScalarProperty Name="mounthCreateStandartPaymentMeth" ColumnName="mounthCreateStandartPaymentMeth" />
+          <ScalarProperty Name="depositType" ColumnName="depositType" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workers">
+      <EntityTypeMapping TypeName="IsTypeOf(EDMdbModel.Workers)">
+        <MappingFragment StoreEntitySet="Workers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="deposit" ColumnName="deposit" />
+          <ScalarProperty Name="methodPayments" ColumnName="methodPayments" />
+          <ScalarProperty Name="mounthCreateStandartPaymentMeth" ColumnName="mounthCreateStandartPaymentMeth" />
+          <ScalarProperty Name="depositType" ColumnName="depositType" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

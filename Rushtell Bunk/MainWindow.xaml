@@ -1,0 +1,83 @@
+﻿<Window x:Class="Rushtell_Bunk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rushtell_Bunk"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinHeight="450" MinWidth="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66"/>
+            <RowDefinition Height="353*"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Months count:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="timer" HorizontalAlignment="Left" Margin="92,11,0,0" TextWrapping="Wrap" Text="{Binding Timer}" VerticalAlignment="Top"/>
+
+        <TabControl x:Name="tabLists" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Standart Clients">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="lsW" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding firstname}" Header="FirstName" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding lastname}" Header="LastName" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding age}" Header="Age" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding salary}" Header="Salary" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding deposit}" Header="Deposit" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding depositType}" Header="Deposit Type" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="50"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="VIP Clients">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="lsVIPW" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding firstname}" Header="FirstName" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding lastname}" Header="LastName" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding age}" Header="Age" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding salary}" Header="Salary" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding deposit}" Header="Deposit" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding depositType}" Header="Deposit Type" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="50"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Juristical Clients">
+                <Grid Background="#FFE5E5E5">
+                    <ListView x:Name="lsOrg" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding name}" Header="Name" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding salary}" Header="Salary" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding deposit}" Header="Deposit" Width="100"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding depositType}" Header="Deposit Type" Width="150"/>
+                                <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="Id" Width="50"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Add" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Set VIP" HorizontalAlignment="Right" Margin="0,35,10,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="190,35,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top" RenderTransformOrigin="2.534,0.501"/>
+        <TextBlock HorizontalAlignment="Left" Margin="258,35,0,0" TextWrapping="Wrap" Text="Deposit:" VerticalAlignment="Top"/>
+        <Button Content="Deposit money" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_2"/>
+        <Button Content="Withdraw money" HorizontalAlignment="Left" Margin="243,10,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click_3"/>
+        <Button Content="Transfer money" HorizontalAlignment="Left" Margin="348,10,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_4"/>
+        <TextBlock x:Name="idtext" HorizontalAlignment="Left" Margin="209,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textDeposit" HorizontalAlignment="Left" Margin="306,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Delete" HorizontalAlignment="Right" Margin="0,10,90,0" VerticalAlignment="Top" Width="75" Click="Button_Click_5"/>
+    </Grid>
+</Window>

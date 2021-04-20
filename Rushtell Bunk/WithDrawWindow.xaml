@@ -1,0 +1,19 @@
+﻿<Window x:Class="Rushtell_Bunk.WithDrawWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rushtell_Bunk"
+        mc:Ignorable="d"
+        Title="Withdraw Window" Height="129" Width="222" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock x:Name="ID" HorizontalAlignment="Left" Margin="29,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Deposit" HorizontalAlignment="Left" Margin="131,8,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox x:Name="sum" HorizontalAlignment="Left" Height="24" Margin="72,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="Write sum:" VerticalAlignment="Top"/>
+        <Button Content="Accept" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,8,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="83,8,0,0" TextWrapping="Wrap" Text="Deposit:" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

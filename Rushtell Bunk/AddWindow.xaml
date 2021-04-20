@@ -1,0 +1,71 @@
+﻿<Window x:Class="Rushtell_Bunk.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rushtell_Bunk"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="219" Width="475" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="139"/>
+            <ColumnDefinition Width="653*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Select Type Account:" VerticalAlignment="Top" Height="16" Width="119"/>
+        <ComboBox x:Name="accType" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="120" Height="22" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>
+                <TextBlock Text="Organization"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock Text="Private person"/>
+            </ComboBoxItem>
+        </ComboBox>
+        <Grid x:Name="gridW" Visibility="Hidden" Grid.Column="1" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="633">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" Text="Age:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Salary:" VerticalAlignment="Top" RenderTransformOrigin="0.646,1.88"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,125,0,0" TextWrapping="Wrap" Text="Type Payment:" VerticalAlignment="Top"/>
+            <TextBox x:Name="firstnameW" HorizontalAlignment="Left" Height="23" Margin="121,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <TextBox x:Name="lastnameW" HorizontalAlignment="Left" Height="23" Margin="121,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <TextBox x:Name="ageW" HorizontalAlignment="Left" Height="23" Margin="121,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <TextBox x:Name="salaryW" HorizontalAlignment="Left" Height="23" Margin="121,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <ComboBox x:Name="typePayW" HorizontalAlignment="Left" Margin="121,124,0,0" VerticalAlignment="Top" Width="164">
+                <ComboBoxItem>
+                    <TextBlock Text="With out payments"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Standart payments"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Payments every mounth"/>
+                </ComboBoxItem>
+            </ComboBox>
+        </Grid>
+        <Grid Visibility="Hidden" x:Name="gridOrg" Grid.Column="1" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="633">
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name organization:" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,39,0,0" TextWrapping="Wrap" Text="Salary:" VerticalAlignment="Top" RenderTransformOrigin="0.646,1.88"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="Type Payment:" VerticalAlignment="Top"/>
+            <TextBox x:Name="nameOrg" HorizontalAlignment="Left" Height="23" Margin="121,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <TextBox x:Name="salaryOrg" HorizontalAlignment="Left" Height="23" Margin="121,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164"/>
+            <ComboBox x:Name="typePayOrg" HorizontalAlignment="Left" Margin="121,66,0,0" VerticalAlignment="Top" Width="164">
+                <ComboBoxItem>
+                    <TextBlock Text="With out payments"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Standart payments"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Payments every mounth"/>
+                </ComboBoxItem>
+            </ComboBox>
+
+        </Grid>
+        <Button Content="Accept" HorizontalAlignment="Left" Margin="31,81,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
+    </Grid>
+</Window>
