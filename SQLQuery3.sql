@@ -57,3 +57,4 @@ CREATE TABLE [dbo].[Workers] (
     [depositType]                     NVARCHAR (50) NOT NULL,
     [type]                            NVARCHAR (50) NOT NULL
 );
+
