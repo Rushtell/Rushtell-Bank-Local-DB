@@ -58,3 +58,4 @@ CREATE TABLE [dbo].[Workers] (
     [type]                            NVARCHAR (50) NOT NULL
 );
 
+
